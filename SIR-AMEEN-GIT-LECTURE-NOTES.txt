@@ -1,0 +1,208 @@
+{****GIT LECTURE BY SIR AMEEN ALAM****}
+
+     [PROFESSIONAL USE CASES OF GIT]
+
+
+Hamaray paas git mai 3 tarha k option hotay hein(three types of option in git) 
+1. git stage
+2. git commit
+3. remote environment/ git remote repository
+4. changes
+
+suppose:
+   'k aik developer aaya uss nai working ki uss working ko kehtay hein "CHANGES", jo working ki developer nai uss working ko aagay deliver kiya uss ko kehtay hein "STAGE" jo working aagay deliver karni hy uss working ko deliver karnay k liye uss nai pack kar diya hy matlab aagay pohanchanay k liye ready kar k rakha hy to uss ko ham boltay hein "COMMIT" jab wo commit proper deliver ho jata hy means k jis location par uss nai jana tha yani k jis repo mai uss nai jana tha jab wo deliver ho jata hy to uss ko ham boltay hein "REMOTE".
+
+* git kiya karta hy k git hamaray code mai aata hy orr kehta hy k jo new changes hain code mai, mai sirf wo parhunga means sirf new changes ko read karta hy git, git yeh karta hy k wo hamay bata deta hy k kiya changes hy code mai or uss changes mai sai kiya ham nai bucket mai daalna hy, changes nikali git nai stage kiya developer nai means ham nai, commit bhi ham nai kiya 
+
+SIR AMEEN EXAMPLE: (MART)
+bucket mai code daalnay k liye command: git add .
+
+   i) shopkeeper gave a bucket, bucket is temporary, means bucket is (git stage) uss mai ham nai apni pasnad ki chocolates daldi phir counter par jana hoga
+   ii) samaan liya, bucket mai dala, counter par gaye, paisay diye, to iss ko ham git mai kehtay hein  commit, means git mi yeh hota hy k ham nai code kiya, changes git nai batai, phir ham nai iss ko command run ki git add . kar k changes       ko apni file mai dala orr aik commit kar diya means k pack ho gaya, commit k saath aik msg jata hy wo iss liye jata hy important, k kyun k tracking git ksr raha hy orr ham nai git ko ka o nahi batana k code kon kar raha hy git khud track       karya ga k kis nai code kiya hy
+   iii) changes git nai nikali 
+   iv) remote means deliver ho gaya parcel, hamaray case mai ham apni chocolates lai kar ghar pohanch gaye, yani k uss ko jahan deliver hon tha apni location par wo uss chill jagah par pohanch chukki hy
+
+why wo need remote or local?
+
+git architecture divide in to places 
+1. git bolta hy k aap apnay local machine par git install karo orr sab cheezain uss mai chalao, git hota hy tracking k liye. git is SCM (Source Cotrol Management) 
+yeh SCM aik plateform hai or yeh working aesay karta hy k yeh hamara coed par nazar rakhta hy orr jo koi bhi change hoti ein uss ko pakar leta hy orr bata deta hy kiya changes hui hein, developer uss chnages ko means code ko stage karta hy stage iss command sai hota hy 
+     git add .  -----> for stage command
+     git commit -m "koi bhi useful msg"  ------> yeh hai commit k liye
+     git push -----> remote k liye yani k remote par bhej do
+
+ *git ka architecture bolta hy k aap aik centralized system create karo or sara code wahan rakho because future mai develor ziyada ho saktay hein takay problem na ho to git nai yeh kara hy k hamara sara code aik single jagha par ho   jahan par hamara sara code base ho.
+
+ *single source ka beneift yeh huwa hy k yeh bhot simple ho gaya hy k hamray paas kuch kuch remote plateform aa gaye hein like github yeh aik remote plateform hy yani k yeh cloud par rakha huwa y ham iss ko easily bas download kar k  use kar saktay hein because yeh cloud par mojood hy ham sirf aik singl link dai dai orr uss link ki help sai ham uss ko download kar k use kar saktay hein github ki tarha hamaray paas orr bhi pltefor hein gitub, bitbucket, gitlab,  azureDevOps, yeh sab hamaray pass options hein or yeh cloud plateform hein yani k single sourcer hein inn ka use kar k ham apna code easily save kar saktay hein
+
+ * git k architecture do jagha divide hein 
+  1. cloud yani k single source
+  2. local laptop/ local machine
+
+ *ham apnay laptop par git dowmload karengay orr git k through jab ham working kartay hein means git ki help sai ham apni coding kartay hein to git hamaray code ko track karta hy orr code par nazar rakhta hy to jab bhi ham yeh   command run karengay 
+
+ * git ststus  ----> yeh command yeh karti hy k hamaray code mai jo koi bhi changing hui hoti hy wo sab dikhati hy update, modified, delete, means changing everything jo kuch bhi ham nai kia hy abb tak apnay code mai wo show kar deta      hy lekin yeh hamaray local par hi rahy ga wo github par update nahi karay ga.
+
+ * internet ki need hamay har wakt nahi hoti just jab ham apnay code ko push karengay or pull kana ho to jab internet ki need hgoi
+
+ * push ka matlab hoga apni chnges wahan par pohanchna
+
+ * pull ka matlab hota hy wahan ki changing utha kar yahan par lana apni local machine mai
+
+ * agar code kartay howe aik sai ziyada developer working kar rahy hein to agr aik push karay ga to dusray ko apnay pass pull karna paray ga phir agra wo us code mai changning karay ga to wo apni taraf ai push kar sakta hy iss tarha sai    yeh hoga k mai dusray developer ki changing lai sakti hu iss process ko kehtay hein "DISTRIBUTED SOURCE CONTROL SYSTEM" iss ka benefit yeh hota hy k agar do ya do sai ziyada developer working kar rahy hein to aik nai apna      code push kiya github par ya phir kisi or cloud environment par to dusra wahan sai easily code apany paas pull kar sakta hy uss ki changing apnay local machine par lai sakta hy to yeh jo complete process hota hy iss ko kehtay hein      distributed, distribte karna single source sai, simple words mai agar kaha jaye to iss ko kehtay hein apnay paas copy karna, aik centrallized point sai har koi uthata hy code working karnay k liye apnay paas. 
+
+ * github sai koi  bhi copy kar nay k liye project ko ham clone kartay hein copy karnay ko clone kehtay hein command ----->   git clone
+
+ * but here is a problem, problem yeh hy k single source ka jo code hy wo har developer k paas hy or har developer apnay according coding kar raha hy, coding to uss nai karli lekin jab yeh code har developer push karay ga update karay ga github par ya phir kisi bhi remote environment par to sarri coding kharaab ho jaye gi 
+
+* to issi probllem ko solve karnay k liye git nai aik branching strategy di hy, git kehta hy hama k parent child wali aproach use karo,jab ham git ko open kartay hein to git par aik branch hy main branch yeh branch bydefault hoti hy ya to mai hogi ya phir master hogi 
+
+* to koi bhi remote environment ham use kartay hein to yeh hamay yeh facility deta hy k ham apnay main branch k andar sub branches create kar saktein hein iss sai yeh hota hy k agar kio developer kisi website k aik part mai working kar raha hy to wo iss k liyeaik sub branch create kar sakta hy yani k wo abb apni local machine par code pull or push karay ga to wo uss sub branch sai karay ga issi tarha dusra developer another part k liye aik another branch create kar sakta hy iss branching facility ki wajha sai developer ki working kharaab nahi hogi or inn k darniyaan conflicts create nahi hotay but branching create kar nay ka matlab yeh bhi nahi hota hy k har choti si choti chez k liye ham branching create karay aesat scenario ko hamy khud hi manage karna parta hy, iss k liye kuch best practices use hoti hein.
+
+* jab working ho jati hai to develepors apnay local branch ko remote k main branc k saath push ka dengay means k merge kar dengay, phir ham uss main branch mai sai updated ya new changes apnay locla branch mai lai saktay hein
+
+* git ki branches k uper push or pull chalta hy hamesha iss ka faids yeh hota hy k hamay pata hota hy k single source of truth source code hy or single source of truth source code mai single source of branch hai, branch mai parent child hierarchy use hoti hy,single source of truth github ki repo nahi hy yeh single source of truth github ki repo k andar git ki branch hoti hy (always remeber this thing)
+
+* Main k baad aik branch or hoti hy dev branch, dev branch deveoper k liye last hoti hy 
+
+* branch ki hamesha do copies hoti hein 
+  1. single source jo remote par rakhi hui hy
+  2. jo developer ki local machine mai hoti hy uss ki itni value nahi hoti because developer local par working karta hy asal mai wo working ko main remote branch mia push karta hy 
+
+* ziyada branches nahi hotii hein sirf main branch, dev branch, or sub branches hoti hein, by default aik main branch hoti hy baki ham apni requiremnts k according crete kartay hein
+
+
+PRACTICE START
+
+practice karengay
+
+1. gitlogs
+2. tracking
+3. errors solve karngay kuch
+
+* AzureDevOps microsoft ka hy orr yeh paid hy.
+
+* aik repo clone ki iss command sai-----> git clone 
+* change directory kar k clone kiye howe project mai enter kiya -----> cd
+* current branch pata karnay k lliye apnay project ki command ------> git branch
+* git branch karnay k baad hamari current branch bata dega current branch hai hamari -----> * main (main hai hamara parent bydefault parent branch aati hy) 
+*  * main or ham kis branch k saath hein wo asterisk batata hy yani k mai apni main branch k saath connected hu, or yeh command yeh bhi batati hy k hamri local machine par main branch ki aik copy rkahi hui hy
+* agr ham yeh command likhay to hamay puri list show ho jaye gi k hamaray main branch mai kitni branches hein -----> git branch -a
+* git branch -a command run karnyak baad hamay 3 jagha main branche slikhi hui dikhay gi  reason:
+   i) * main ----->  yeh hai local laptop par download hui wi means copy hy aik bani hui
+   ii)  remotes/origin/main ------>  yeh wali hy remote wali yani k hamaray cloud environment ki
+   iii)  remote/origin/HEAD -> origin/main ------> yeh wali command hy head means k abhi hamara head kis k saath connect hai yeh simple yeh batata hy currnetly yeh kis k saath connect hai, yeh abhi origin/main head         k saath connect hai
+* git status -----> yeh aik command hai yeh hamay yeh batati hy k hamray code mai koi changing hui hy update, delete, modified anything, saath mai yeh command hamay branch bhi bata deti hy 
+* git k saath ham har wakt connect ho kar working nahi kar saktay hein because git nai aona distruibuted architecture banaya hai k aap jab aap push or pull karein gay jab hamay internet chahiye otherwise no
+* hamaray paas aik command hoti hy changes karnay k liye "echo" ki yeh command kiya karti hy k ham iss k aagay likhay gay -> echo Hello -> enter -> yeh aik echo ka msg print kar deti hy 
+* koi bhi chez koi bhi printing karay to uss ko ham boltey hein "STANDARD OUTPUT" 
+* echo command yeh karti hy k agar ham iss k aagay kuch bhi text likhay to yeh iss ko print kar deti hy
+* hamaray pass aik or command hai jis ki help sai ham file create kar sakta hein ------> echo Hello > abc.txt
+*  echo Hello > abc.txt yeh command aik file create kar deti hy, echo nai yeh text print kiya 'Hello' or yeh > greater than nai yeh output utha kar iss file k andar put kar diya 
+* dir ki comand directory ki list show kar deti hy 
+* echo Hello > abc.txt yeh command run karnai sai hamray paas aik file create ho gai
+* git status kiya to hamay abc.txt ki file show honay lagi, yahan par hamay untracked file show kar raha hy yani k aik file aesi hy jis ko add nai kiya gaya hy ot
+* abb ham nai aik command run ki "git add ." iss command mai (.) means "all files" hein or agar kisi specific file ko dalna hy to dot ki jagha uss file ka name likhay gay, then show karay ga k file tracked ho gai hein lekin abhi commited nahi    hein, ham iss ko revert bhi kar aktay hein yani k jo files ham nai add ki hein uss ko dubara sai reverse karna, yeh command run karny ka matlab k staging mai rakhna   
+* phir dubara sai git status run kiya to wo show karay ga k ham nai file add karli 
+* git commit -m "relevent msg" ----> yeh command run karengay to git mai commitment ho jaye gi, commit k saath ham aik relevent msg write kartay hein takay hamay yaad rahy k yeh file kyun add ki hy, yeh command run kar k enter show hoga hamnay jitni files add ki hein show hoga 1 file changed, 1 insertion(+), jab bhi ham yeh yeh command first time run karengay to wo ham sai hamara username or email hamray configuration sai nikal kar use karta hy, ham yeh do chezain enter kartay hein
+* jab bhi ham git ko apnay system mai download ya install kartay hein to hamy git ko apnay system k saath configure karna parta hy, wo aesay kartay hei jab bhi ham yeh command  ----> git commit -m "relevent msg" run karengay first time apnay terminal mai to wo aik error show karay ga username or email ka jo k hamay uss ko deni paray gi, wo wali email or username enter karay gay ham jis sai ham nai apna git install kiya hy
+yeh do command run karengay ham
+
+i) git config --global user.name "username-ayega"
+ii) git config --global user.email "useremail-ayegi"
+
+yeh one time git configuration hy, iss liye jab ham yeh email or username enter kar detay hein to git khud hi recognize kar leta hy k commit kis nai kiya hy, kis developer nai kiya hy, is liye hamay batana nahi parta hy k kisi nai commit kiya hy, git ko khud hi pata chal jata hy,git phir wo commit apni history mai maintain karay lai ga k yeh commit kis nai kiya hy orr kab kya hai
+
+* phir again commit karna parta hy because configuration set nahi thi isliye -----> git commit -m "relevent msg"  
+* again git status kar k dekh saktay hein
+* then remote par code push karengay -----> git push
+* but agar hamy koi file push na karni hoto ya for example ham sai koi mistake ho gai ghalat branch mai commit kar diya to uss ko remove kesay kartay hein? VERY EASY AND IMPORTANT TOPIC
+* iss ka solution yeh hy k commit ko wapis revert karna back karna keasy?
+* git reset --soft   -----> soft ka matlab hy k mai nai jo commit kiya hy us ko wapis sai reverse kar do, yani k bina kuch delete kiye safely, softly back karlo, sab sai simple words mai agar kaha jaye to matlab hy  mera jo kaam hy uss ka sirf commit remove karo kaam wesay hi rehnay do taky mai uss ko kisi or jagah push kar saku, mera kaam delete na ho kaam rahy
+* git reset --hard  -----> iss ka matlab hy k sab kuch delet kardo jo files commit ki hein orr commit etc sab kuch delete kar mujhy need nahi hy inn sab ki dustbin mai dalo
+* git reset --soft HEAD~1 ----> yeh jb run kartay hein jab hamay just commit remove karna ho working rehnay deni ho, iss mai HEAD hamara jo bhi current branch hein uss k saath connect hy but HEAD mai to bohot saray commit hein konsa remove karna hy mujy to uss k liye yeh kartay hein ~1 yani k sab sai last wala commit remove kar do
+* aaik command or hoti hy git k logs show hotay hein -----> git log
+* yeh command run karna sai saray commits dikhadai ga k kis nai or kab kiya commit kya hy with email, date/time, commit iss command sai ---> git log
+* phir yeh command run ki dubara sai  ---->  git reset --soft HEAD~1
+* git status to wapis sai hamara commit reverse hogaya or staging walay step par aagaya
+* yeh baat yaad rakhni hy k checkout kartay wakt ham sirf ussi branch mai checkout kar saktay hein jo pehay sai bani hui hy
+* yeh command run karnay sai ham ussi branch mai checkout kar saktay hein jo pehlay sai bani hui hy ------> git branch -a (yani k main branch)
+* lekin agar alag sai dusri ranch create karni ho to uss ka aik rule hy yeh command run karengay -----> 
+* branch iss liye banti hy takay wo single source of truth rahy or multiple branches iss lye create kartay hein takay aik parent ho or baki is k child ho
+* jitni bhi branches hoti hein wo parents sai bani hoti hein iss liye koi new branch create karnay k liye 2 chezin chahiye hoti hein 
+  1. force --> yani k banani kis sai hai iss ka parent kon hai
+   2. name ---> k wo kis name sai hai
+* abb aik ussi branch mai dalna hoto likhtay hein "git checkout" jo pehlay sai hai or agar new create karni hoto -----> git checkout -b demo-force-push   (-b mean hy k new branch or uss k aagay jo likha hy wo branch ka name hai)
+* kisi create branch mai checkout karnay k liye asay kartay hein ----> git checkout dev    (dev means uss branch ka name)
+* ham karengay -----> git branch  ----> iss sai hoga yeh k local par hamari branch aagaye gi or abhi ham connected hein de k saath abhi hamra origin main hi hy lekin ham connected hein yani k haamara local abhi dev sai connected hai, jis k saath * asterisk hota hy ham uss k saath connected hain
+* origin hamara main hi hy lekin hamara local jo hy wo dev k saath connected hy
+* wapis sai ham main mai aagaye iss command sai ---->  git banch
+* main mai janay k liye yeh command hai wapis sai -----> git checkout main
+* git branch
+* git checkout main
+* git status
+* jab tak commit nahi huwa wa hy to jab ta hamara code jo hai na wo stage mi hi rahy ga, iss liye jab tak stage hai na wo kisi branch k saath connect nahi hy wo sirf hamaray local laptop par stage hai to wo kisi branch k saath committed nahi hy
+
+* jis branch mai checout karna hy uss k liye yeh command run karni hot hy ----> git checkout main     abb jis branch mai checkout karna hy uss ka name dena hy jesay main ya dev
+* branch ko check karnay k liye ----> git branch
+* abb ham nai apnay main mai aik branch create ki hy ----> git checkout -b demo-force-push
+* git status
+* now abb commit kiya ----> git commit -m "demo text file" demo-force-push k andar successfully commit hogaya
+* demo-force-push  wo to remote par nahi rakhi hui hy, orr by default jo hamari branch hai wo main hy
+* main k ilawa agar koi or branch ho to hamay push kartay howe apni branch ka name laazmi batana hy warna wo main mai push kar dega like ---->  git push origin demo-force-push
+* git reset --soft HEAD~1 ------> iss nai remote sai remove kar diya orr hamaray local laptop par lai aaya, yani k staging mai commit aagay branch sai nikal gaya
+* ham nai git reset --soft HEAD~1 is command sai apnay local par sai commmit to remove kar diya lekin remote ko to iss ka nahi pata k local par sai yeh remove ho gaya hy to uss k liye ham aik command run kartay hein
+  git push origin demo-force-push  ---> aik error aaye ga wo yeh k git hamy yeh bolay ga k aap nai yeh file pus kardi thi but abb aap k paas iss ko koi record hi nahi hy to iss k liye git nai hi hamy solution diya hy, yeh error iss liye aata hy because ham git ki history ko manipultate kar rahy hein means overwrite kar rahy hein 
+* to iss k liye git nai hi hamay aik solution diya hy k ham iss ko forcefully update kar saktay hein iss command sai, iss sai hamaray paas branch to mojood rahay gi but file delete ho jaye gi ----->  git push origin demo-force-push --force 
+* branch kesay delete hogi
+* kabhi bhi kabhi bhi hamari parent branch delete nahi hogi remote par sai yani k main branch delete nahi kr saktay hein ham yeh kar saktay hein k ham iss ko parent ki jagha si remove kar k kisi or ko paren rakh saktay hein lekin ham iss   ko delete nahi kar saktay 
+* dusri important baat yeh hy k mai kisi bhi sub branch mai mojood hu orr uss ko delete karna chah rhi hu to mujhy uss sai pehlay iss branch mai sai checkout karna paray ga apni main branch mai
+abb apni branch delete karnay k liye yeh command run karni paray gi, lekin yeh hamary local sai delete hui   ------>  git branch -D demo-force-push 
+* remote sai delete karnay k liye yeh command run karni parti hy ------>   git push origin --delete demo-force-push
+* echo sowaiba > xyz.txt aik file create ki
+* git add .  ------> yeh karnay sai ham apni files ko staging par lai aatay hein
+* staging sai data ko remove karnay k do tareekay hein aik to soft or aik hard
+* agar hamay soft karna hy to likhnay ki need nhi hy by default soft hota hy yeh command likhtay hein, is command sai yeh staging sai remove ho kar sirf hamaray local machine yani k laptop par reh jaye ga means untrack ho jaye ga 
+   ----> git reset
+*  kisi aik specific file ko bhi ham unstage kar saktay hein uss k name sai  ------> git reset xyz.txt
+* jab ham hard karengay to wo code ko delete hi kar dai ga permanently remove kar dai   ----->  git reset --hard
+
+* abb ham aik important kaam karna chah rahy hein wo yeh hy k ham remote par sai apni repo ki history delete karna chah rahy hein mtlab k sab kuch truncate ya delete karna chah rahy hein sirf history delete karni hy lekin repo rakhi hy to wo kesay karay, logs sab delete karnay hein 
+*  yeh command yeh bataegi k total kitni hy -----> git branch -a
+* yeh aik command hai jo k powershell ya linux par run use hoti hy otherwise command prompt par error aaye ga  ----->  git push origin --delete $(git branch -r | grep -v "\->" | sed 's /origin\///g')
+* command understanding :  git push origin --delete $(git branch -r | grep -v "\->" | sed 's /origin\///g')
+*   git branch -r = yeh iss liye likha k main ko chor kar baki ki brances laa kar dedo, -r matlb k poori list lai kar aani hy
+*   grep -v = -v means exclude kar do jo mai bata rahi hy aagay, yani k iss k ilawa
+*   ->  = iss arrow ka matlab hy HEAD yani k jahan par yeh HEAD ho uss ko chor do
+*   sed  =  yeh hota hy find and replace, searching karo HEAD k andar
+*    's /origin\///g'  =  iss ka matlba hy k searching karo origin orr iss origin globally hata do remove kar do, orr baki sab ko delete kar do
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
