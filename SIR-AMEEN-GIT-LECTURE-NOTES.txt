@@ -177,32 +177,3 @@ abb apni branch delete karnay k liye yeh command run karni paray gi, lekin yeh h
 *   sed  =  yeh hota hy find and replace, searching karo HEAD k andar
 *    's /origin\///g'  =  iss ka matlba hy k searching karo origin orr iss origin globally hata do remove kar do, orr baki sab ko delete kar do
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
